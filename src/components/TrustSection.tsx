@@ -15,12 +15,12 @@ export default function TrustSection() {
               Our Principles
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] leading-tight font-medium text-[#111111]">
-              The Benchmarks of <span className="italic font-normal">Heritage Sourcing</span>
+              The Benchmarks of <span className="italic font-normal">Fine Curation</span>
             </h2>
           </div>
           <div className="lg:col-span-7">
             <p className="font-sans text-base lg:text-lg text-[#111111]/70 leading-relaxed font-light">
-              Acquiring a historical artifact is a commitment to preserving cultural luxury. We serve as the custodian of absolute transparency, supporting every single acquisition with authentic forensic, scholastic, and structural verification portfolios.
+              We believe a distinguished residence is a canvas of artistic expression. Every piece in our Aarasta collection acts as an exquisite anchor of character, supported by complete material transparency, direct designer guidance, and secure white-glove delivery.
             </p>
           </div>
         </div>
@@ -37,16 +37,16 @@ export default function TrustSection() {
                 01 / INTEGRITY
               </span>
               <h3 className="font-serif text-xl font-medium text-[#111111] mb-4">
-                Verified Authenticity
+                Premium Craftsmanship
               </h3>
               <p className="font-sans text-sm text-[#111111]/70 leading-relaxed font-light">
-                Every masterpiece is supported by chemical, radiocarbon, or scholastic dossiers vetted by prominent antiquity committees. Each piece arrives with a formal Certificate of Origin.
+                Each timeless timepiece, travertine vessel, and textured gesso panel is hand-crafted and checked across rigorous stages, ensuring exceptional, long-lasting construction and premium material finishes.
               </p>
             </div>
             {/* Subtle photographic text reference */}
             <div className="mt-8 pt-4 border-t border-[#EAE6DF]/40">
               <span className="font-mono text-[10px] uppercase tracking-widest text-[#8B6F47]">
-                [ Rigorous Scholastic Dossier ]
+                [ Full Material Transparency ]
               </span>
             </div>
           </div>
@@ -55,18 +55,18 @@ export default function TrustSection() {
           <div className="border-[#EAE6DF] border-b lg:border-r p-8 md:p-10 flex flex-col justify-between hover:bg-[#EAE6DF]/20 transition-all duration-300">
             <div>
               <span className="font-mono text-xs tracking-widest text-[#8B6F47] font-semibold block mb-8">
-                02 / SCHOLARSHIP
+                02 / EXPERTISE
               </span>
               <h3 className="font-serif text-xl font-medium text-[#111111] mb-4">
-                Expert Consultation
+                Selection Guidance
               </h3>
               <p className="font-sans text-sm text-[#111111]/70 leading-relaxed font-light">
-                We believe in continuous education. Benefit from scheduled private walkthroughs, digital condition video reviews, or coordinate directly with specialized historians in Indian sculpture and textiles.
+                Our interior specialists assist you in choosing objects that harmonize with your current spacing. Call on us for styling, sizing recommendations, placement formulas, and lighting advice.
               </p>
             </div>
             <div className="mt-8 pt-4 border-t border-[#EAE6DF]/40">
               <span className="font-mono text-[10px] uppercase tracking-widest text-[#8B6F47]">
-                [ Direct Antiquary Access ]
+                [ Custom Styling Dialogue ]
               </span>
             </div>
           </div>
@@ -78,15 +78,15 @@ export default function TrustSection() {
                 03 / SECURE TRANSIT
               </span>
               <h3 className="font-serif text-xl font-medium text-[#111111] mb-4">
-                Insured Pan India Delivery
+                Insured Safe Delivery
               </h3>
               <p className="font-sans text-sm text-[#111111]/70 leading-relaxed font-light">
-                We employ specialized, museum-approved logistics. Fragile sculptures and precious paintings travel via custom-crated climate vehicles, fully secured and insured directly to your estate gates.
+                All delicate items travel in custom padded, shock-proof boxing. Backed by comprehensive marine-grade transit insurance, we verify every stage of shipping directly to your parlor.
               </p>
             </div>
             <div className="mt-8 pt-4 border-t border-[#EAE6DF]/40">
               <span className="font-mono text-[10px] uppercase tracking-widest text-[#8B6F47]">
-                [ Climate-Managed Freight ]
+                [ Shock-Proof Packaging ]
               </span>
             </div>
           </div>
@@ -95,18 +95,18 @@ export default function TrustSection() {
           <div className="border-[#EAE6DF] border-b p-8 md:p-10 flex flex-col justify-between hover:bg-[#EAE6DF]/20 transition-all duration-300">
             <div>
               <span className="font-mono text-xs tracking-widest text-[#8B6F47] font-semibold block mb-8">
-                04 / PROVENANCE
+                04 / THOUGHTFUL CURATION
               </span>
               <h3 className="font-serif text-xl font-medium text-[#111111] mb-4">
-                Curated Nobility
+                Individualistic Accents
               </h3>
               <p className="font-sans text-sm text-[#111111]/70 leading-relaxed font-light">
-                Our inventory remains meticulously restrained. We only source pieces of distinct artistic, noble, or lineage significance, avoiding generic antique reproductions.
+                We design and select pieces that transcend fleeting seasonal trends, bringing organic textures, sculptural geometries, and beautiful function to distinguished estates.
               </p>
             </div>
             <div className="mt-8 pt-4 border-t border-[#EAE6DF]/40">
               <span className="font-mono text-[10px] uppercase tracking-widest text-[#8B6F47]">
-                [ Rare Masterpiece Focus ]
+                [ Restrained Boutique Drops ]
               </span>
             </div>
           </div>

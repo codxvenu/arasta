@@ -12,6 +12,7 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
     phone: '',
     email: '',
     productOfInterest: prefilledProductTitle || '',
+    consultationType: 'Interior Styling Consultation',
     preferredCallTime: 'Morning (09:00 AM - 12:00 PM)',
     additionalNotes: ''
   });
@@ -28,7 +29,7 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
 
   useEffect(() => {
     // Read count of local bookings to display realistic trust
-    const stored = localStorage.getItem('heritage_pavilion_bookings');
+    const stored = localStorage.getItem('heritage_aarasta_bookings');
     if (stored) {
       try {
         const bookings = JSON.parse(stored);
@@ -54,7 +55,7 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
 
     // Simulate luxury API handling
     setTimeout(() => {
-      const stored = localStorage.getItem('heritage_pavilion_bookings') || '[]';
+      const stored = localStorage.getItem('heritage_aarasta_bookings') || '[]';
       let bookings = [];
       try {
         bookings = JSON.parse(stored);
@@ -67,10 +68,23 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
       };
       
       bookings.push(newBooking);
-      localStorage.setItem('heritage_pavilion_bookings', JSON.stringify(bookings));
+      localStorage.setItem('heritage_aarasta_bookings', JSON.stringify(bookings));
       
       setIsSubmitting(false);
       setIsSubmitted(true);
+
+      // Open WhatsApp deep link with detailed info
+      const productOfInterestText = formData.productOfInterest ? ` regarding "${formData.productOfInterest}"` : '';
+      const whatsappMsg = `Hello i was looking forward to book a call
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Subject: ${formData.consultationType}${productOfInterestText}
+Preferred Time: ${formData.preferredCallTime}
+Notes: ${formData.additionalNotes || 'N/A'}`;
+
+      window.open(`https://wa.me/916283067083?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
       
       if (onBookingSuccess) {
         onBookingSuccess();
@@ -84,6 +98,7 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
       phone: '',
       email: '',
       productOfInterest: '',
+      consultationType: 'Interior Styling Consultation',
       preferredCallTime: 'Morning (09:00 AM - 12:00 PM)',
       additionalNotes: ''
     });
@@ -98,32 +113,32 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
           
-          {/* Form Briefing / Scholarly intro (lg:5) */}
+          {/* Form Briefing / Styling Intro (lg:5) */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#8B6F47] block mb-3">
-                Private Advisory
+                Expert Curation
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] leading-tight font-medium text-[#111111] mb-6">
-                Request Private <br />
-                <span className="italic font-normal text-[#8B6F47]">Scholarly Consultation</span>
+                Request Interior <br />
+                <span className="italic font-normal text-[#8B6F47]">Styling Guidance</span>
               </h2>
               <p className="font-sans text-sm sm:text-base text-[#111111]/70 leading-relaxed font-light mb-8">
-                Should you require further physical authentication chronicles, customized condition videos, scale renderings, or plan private viewing appointments inside our New Delhi or Bengaluru salons, our antiquary associates are available to respond.
+                Should you require professional advice on room suitability, material combinations, product placement, bulk custom orders, or luxury residential recommendations, our styling advisors are available to guide you.
               </p>
 
               <div id="contact-section" className="space-y-4 pt-4 border-t border-[#EAE6DF]">
                 <div className="flex items-center space-x-3 text-sm text-[#111111]/80">
                   <Phone size={16} className="text-[#8B6F47]" />
-                  <span className="font-mono">+91 11 4055 9300 (New Delhi Vaults)</span>
+                  <span className="font-mono">+91 11 4055 9300 (Exquisite Rooms Office)</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm text-[#111111]/80">
                   <Mail size={16} className="text-[#8B6F47]" />
-                  <span className="font-mono">curator@heritagepavilion.in</span>
+                  <span className="font-mono">concierge@aarasta.in</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm text-[#111111]/80">
                   <ScrollText size={16} className="text-[#8B6F47]" />
-                  <span className="font-sans font-light">Salon Hours: Mon – Sat (10:00 AM to 07:00 PM)</span>
+                  <span className="font-sans font-light">Atelier Hours: Mon – Sat (10:00 AM to 07:00 PM)</span>
                 </div>
               </div>
             </div>
@@ -133,7 +148,7 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
               <div className="mt-12 p-4 bg-[#EAE6DF]/30 border border-[#EAE6DF] inline-flex items-center space-x-3 rounded-none">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B7D4A] animate-pulse" />
                 <span className="font-mono text-[11px] tracking-wide text-[#111111]/60">
-                  You have {historyCount} active registered advisory request(s).
+                  You have {historyCount} active styling conversation(s) registered.
                 </span>
               </div>
             )}
@@ -148,11 +163,11 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
                 </div>
                 
                 <h3 className="font-serif text-2xl font-bold text-[#111111] mb-3">
-                  Advisory Request Registered
+                  Consultation Request Registered
                 </h3>
                 
                 <p className="font-sans text-sm text-[#111111]/70 max-w-md leading-relaxed mb-8 font-light">
-                  Our director level antiquary expert has received your dossier query. The gallery will establish direct telephone contact regarding state of authentication and delivery within <b className="font-semibold text-[#8B6F47]">24 hours</b>.
+                  Our professional interior stylist has received your blueprint inquiry. Our office will establish direct telephone contact to organize your selection options within <b className="font-semibold text-[#8B6F47]">24 hours</b>.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
@@ -161,14 +176,14 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
                     onClick={handleReset}
                     className="bg-[#8B6F47] hover:bg-[#111111] text-[#FAF8F3] font-sans text-xs tracking-widest uppercase font-medium py-3 px-8 rounded-full border border-transparent transition-all cursor-pointer text-center"
                   >
-                    Submit Another Request
+                    Submit Another Inquiry
                   </button>
                 </div>
               </div>
             ) : (
               <form id="consultation-form" onSubmit={handleSubmit} className="space-y-6">
                 <span className="font-mono text-[10px] tracking-widest text-[#8B6F47] uppercase block border-b border-[#EAE6DF] pb-2 mb-4">
-                  SCHEDULING FORM
+                  STYLING ADVOCACY DIALOGUE
                 </span>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -182,7 +197,7 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
                       type="text"
                       name="name"
                       required
-                      placeholder="e.g. Maharani Singhania"
+                      placeholder="e.g. Meera Singhania"
                       value={formData.name}
                       onChange={handleChange}
                       className="border-b border-[#D8D2C8] focus:border-[#8B6F47] py-3.5 px-1 font-sans text-sm text-[#111111] bg-transparent focus:outline-none transition-colors"
@@ -218,58 +233,63 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
                       type="email"
                       name="email"
                       required
-                      placeholder="e.g. collector@mahal.in"
+                      placeholder="e.g. design@mahalstudios.com"
                       value={formData.email}
                       onChange={handleChange}
                       className="border-b border-[#D8D2C8] focus:border-[#8B6F47] py-3.5 px-1 font-sans text-sm text-[#111111] bg-transparent focus:outline-none transition-colors"
                     />
                   </div>
 
-                  {/* Preferred Call Time */}
+                  {/* Consultation Type */}
                   <div className="flex flex-col space-y-1">
-                    <label id="lbl-preferredCallTime" className="font-sans text-xs tracking-widest uppercase text-[#111111]/60">
-                      Preferred Advisory Hour
+                    <label id="lbl-consultationType" className="font-sans text-xs tracking-widest uppercase text-[#111111]/60">
+                      Inquiry Subject
                     </label>
                     <select
-                      id="select-preferredCallTime"
-                      name="preferredCallTime"
-                      value={formData.preferredCallTime}
+                      id="select-consultationType"
+                      name="consultationType"
+                      value={formData.consultationType}
                       onChange={handleChange}
                       className="border-b border-[#D8D2C8] focus:border-[#8B6F47] py-3.5 px-1 font-sans text-sm text-[#111111] bg-transparent focus:outline-none transition-colors"
                     >
-                      <option className="bg-[#FAF8F3]">Morning (09:00 AM - 12:00 PM)</option>
-                      <option className="bg-[#FAF8F3]">Afternoon (12:00 PM - 04:00 PM)</option>
-                      <option className="bg-[#FAF8F3]">Evening (04:00 PM - 07:00 PM)</option>
+                      <option className="bg-[#FAF8F3]">Interior Styling Consultation</option>
+                      <option className="bg-[#FAF8F3]">Product Selection Guidance</option>
+                      <option className="bg-[#FAF8F3]">Availability Assistance</option>
+                      <option className="bg-[#FAF8F3]">Bulk Atelier Orders</option>
+                      <option className="bg-[#FAF8F3]">Luxury Home Recommendations</option>
+                      <option className="bg-[#FAF8F3]">Architect Project Discussions</option>
                     </select>
                   </div>
                 </div>
 
-                {/* Product of Interest */}
-                <div className="flex flex-col space-y-1">
-                  <label id="lbl-productOfInterest" className="font-sans text-xs tracking-widest uppercase text-[#111111]/60">
-                    Masterpiece of Interest
-                  </label>
-                  <input
-                    id="input-productOfInterest"
-                    type="text"
-                    name="productOfInterest"
-                    placeholder="e.g. The Great Chola Nataraja Bronze (Optional)"
-                    value={formData.productOfInterest}
-                    onChange={handleChange}
-                    className="border-b border-[#D8D2C8] focus:border-[#8B6F47] py-3.5 px-1 font-sans text-sm text-[#111111] bg-transparent focus:outline-none transition-colors"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Choice Piece of Interest */}
+                  <div className="flex flex-col space-y-1 col-span-1 md:col-span-2">
+                    <label id="lbl-productOfInterest" className="font-sans text-xs tracking-widest uppercase text-[#111111]/60">
+                      Styling Piece of Interest (Optional)
+                    </label>
+                    <input
+                      id="input-productOfInterest"
+                      type="text"
+                      name="productOfInterest"
+                      placeholder="e.g. The Fluted Travertine Masterpiece Vessel"
+                      value={formData.productOfInterest}
+                      onChange={handleChange}
+                      className="border-b border-[#D8D2C8] focus:border-[#8B6F47] py-3.5 px-1 font-sans text-sm text-[#111111] bg-transparent focus:outline-none transition-colors"
+                    />
+                  </div>
                 </div>
 
                 {/* Additional Notes */}
                 <div className="flex flex-col space-y-1">
                   <label id="lbl-additionalNotes" className="font-sans text-xs tracking-widest uppercase text-[#111111]/60">
-                    Additional Historical Portfolio Requests
+                    Spacing & Room Placement Detail Overview
                   </label>
                   <textarea
                     id="textarea-additionalNotes"
                     name="additionalNotes"
                     rows={3}
-                    placeholder="Please specify if you want condition reporting videos, scale reference details, or specific provenance documentation..."
+                    placeholder="We welcome structural layout metrics, primary furniture families, lighting coordinates, or specific room suitabilities you want to synchronize..."
                     value={formData.additionalNotes}
                     onChange={handleChange}
                     className="border-b border-[#D8D2C8] focus:border-[#8B6F47] py-3.5 px-1 font-sans text-sm text-[#111111]/80 bg-transparent focus:outline-none transition-colors resize-none"
@@ -284,7 +304,7 @@ export default function ConsultationForm({ prefilledProductTitle, onBookingSucce
                     disabled={isSubmitting}
                     className="w-full bg-[#111111] hover:bg-[#8B6F47] text-[#FAF8F3] font-sans text-xs tracking-widest uppercase font-medium py-4 px-8 rounded-full border border-transparent transition-all duration-300 text-center cursor-pointer disabled:opacity-50"
                   >
-                    {isSubmitting ? 'Registering advisement...' : 'Request Private Advisement'}
+                    {isSubmitting ? 'Registering request...' : 'Book Styling Guidance'}
                   </button>
                 </div>
               </form>

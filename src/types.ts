@@ -2,22 +2,19 @@ export interface Product {
   id: string;
   title: string;
   category: string;
-  origin: string;
-  era: string;
-  period: string;
+  finish: string;
   material: string;
   dimensions: string;
+  roomSuitability: string;
   availability: 'Available' | 'Reserved' | 'Acquired';
   images: string[];
-  historicalStory: string;
-  provenance: string;
-  conditionReport: string;
-  authenticityDetails: {
-    certificateNo: string;
-    reviewedBy: string;
-    documentation: string;
-    verificationStatus: 'Verified' | 'Documented' | 'Expert Committee Reviewed';
-  };
+  designInspiration: string;
+  craftsmanshipDetails: string;
+  stylingRecommendations: string;
+  placementSuggestions: string;
+  careInstructions: string;
+  serialNo: string;
+  curatorInspiration: string;
 }
 
 export interface ConsultationBooking {

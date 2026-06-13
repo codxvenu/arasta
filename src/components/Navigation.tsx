@@ -28,6 +28,20 @@ export default function Navigation({ onNavigate, onHomeClick, currentView }: Nav
     onNavigate(id);
   };
 
+  const isLightText = currentView === 'home' && !isScrolled;
+  const textColor = isLightText 
+    ? 'text-[#FAF8F3] hover:text-[#C4B299]' 
+    : 'text-[#111111] hover:text-[#8B6F47]';
+  const logoTitleColor = isLightText 
+    ? 'text-[#FAF8F3] group-hover:text-[#C4B299]' 
+    : 'text-[#111111] group-hover:text-[#8B6F47]';
+  const logoSubColor = isLightText 
+    ? 'text-[#C4B299]/85' 
+    : 'text-[#8B6F47]';
+  const mobileToggleColor = isLightText 
+    ? 'text-[#FAF8F3] hover:text-[#C4B299]' 
+    : 'text-[#111111] hover:text-[#8B6F47]';
+
   return (
     <header
       id="main-header"
@@ -44,11 +58,11 @@ export default function Navigation({ onNavigate, onHomeClick, currentView }: Nav
           onClick={onHomeClick}
           className="group flex flex-col items-start focus:outline-none cursor-pointer text-left"
         >
-          <span className="font-serif text-xl lg:text-2xl font-bold tracking-widest text-[#111111] uppercase group-hover:text-[#8B6F47] transition-colors">
-            The Heritage Pavilion
+          <span className={`font-serif text-xl lg:text-2xl font-bold tracking-widest uppercase transition-colors duration-300 ${logoTitleColor}`}>
+            Aarasta
           </span>
-          <span className="font-sans text-[9px] tracking-[0.25em] text-[#8B6F47] uppercase font-semibold">
-            Fine Antiques & Rare Collectibles
+          <span className={`font-sans text-[9px] tracking-[0.25em] uppercase font-semibold transition-colors duration-300 ${logoSubColor}`}>
+            Curated Luxury & Interior Accents
           </span>
         </button>
 
@@ -57,42 +71,45 @@ export default function Navigation({ onNavigate, onHomeClick, currentView }: Nav
           <button
             id="nav-link-home"
             onClick={onHomeClick}
-            className="font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium transition-colors cursor-pointer"
+            className={`font-sans text-xs tracking-widest uppercase font-medium transition-colors duration-300 cursor-pointer ${textColor}`}
           >
             Home
           </button>
           <button
             id="nav-link-collection"
             onClick={() => handleLinkClick('collection-section')}
-            className="font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium transition-colors cursor-pointer"
+            className={`font-sans text-xs tracking-widest uppercase font-medium transition-colors duration-300 cursor-pointer ${textColor}`}
           >
             Collection
           </button>
           <button
             id="nav-link-about"
             onClick={() => handleLinkClick('about-section')}
-            className="font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium transition-colors cursor-pointer"
+            className={`font-sans text-xs tracking-widest uppercase font-medium transition-colors duration-300 cursor-pointer ${textColor}`}
           >
-            About
+            Design Philosophy
           </button>
           <button
             id="nav-link-authenticity"
             onClick={() => handleLinkClick('authenticity-section')}
-            className="font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium transition-colors cursor-pointer"
+            className={`font-sans text-xs tracking-widest uppercase font-medium transition-colors duration-300 cursor-pointer ${textColor}`}
           >
-            Authenticity
+            Craftsmanship
           </button>
           <button
             id="nav-link-consultation"
-            onClick={() => handleLinkClick('consultation-section')}
-            className="font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium transition-colors cursor-pointer"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.open(`https://wa.me/916283067083?text=${encodeURIComponent("Hello i was looking forward to book a call")}`, '_blank');
+            }}
+            className={`font-sans text-xs tracking-widest uppercase font-medium transition-colors duration-300 cursor-pointer ${textColor}`}
           >
-            Consultation
+            Styling Consultation
           </button>
           <button
             id="nav-link-contact"
             onClick={() => handleLinkClick('contact-section')}
-            className="font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium transition-colors cursor-pointer"
+            className={`font-sans text-xs tracking-widest uppercase font-medium transition-colors duration-300 cursor-pointer ${textColor}`}
           >
             Contact
           </button>
@@ -102,7 +119,7 @@ export default function Navigation({ onNavigate, onHomeClick, currentView }: Nav
         <div className="hidden sm:flex items-center">
           <button
             id="nav-btn-book-consult"
-            onClick={() => handleLinkClick('consultation-section')}
+            onClick={() => window.open(`https://wa.me/916283067083?text=${encodeURIComponent("Hello i was looking forward to book a call")}`, '_blank')}
             className="bg-[#8B6F47] hover:bg-[#111111] text-[#FAF8F3] font-sans text-xs tracking-widest uppercase font-medium py-2.5 px-6 rounded-full border border-transparent transition-all duration-300 hover:scale-[1.02] cursor-pointer"
           >
             Book Consultation
@@ -113,7 +130,7 @@ export default function Navigation({ onNavigate, onHomeClick, currentView }: Nav
         <button
           id="nav-btn-mobile-toggle"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden text-[#111111] hover:text-[#8B6F47] p-1 focus:outline-none cursor-pointer"
+          className={`lg:hidden p-1 focus:outline-none cursor-pointer transition-colors duration-300 ${mobileToggleColor}`}
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -150,21 +167,24 @@ export default function Navigation({ onNavigate, onHomeClick, currentView }: Nav
             onClick={() => handleLinkClick('about-section')}
             className="text-left font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium py-2 border-b border-[#FAF8F3] cursor-pointer"
           >
-            About
+            Design Philosophy
           </button>
           <button
             id="mobile-link-authenticity"
             onClick={() => handleLinkClick('authenticity-section')}
             className="text-left font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium py-2 border-b border-[#FAF8F3] cursor-pointer"
           >
-            Authenticity
+            Craftsmanship
           </button>
           <button
             id="mobile-link-consultation"
-            onClick={() => handleLinkClick('consultation-section')}
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.open(`https://wa.me/916283067083?text=${encodeURIComponent("Hello i was looking forward to book a call")}`, '_blank');
+            }}
             className="text-left font-sans text-xs tracking-widest text-[#111111] hover:text-[#8B6F47] uppercase font-medium py-2 border-b border-[#FAF8F3] cursor-pointer"
           >
-            Consultation
+            Styling Consultation
           </button>
           <button
             id="mobile-link-contact"
@@ -175,7 +195,10 @@ export default function Navigation({ onNavigate, onHomeClick, currentView }: Nav
           </button>
           <button
             id="mobile-link-book"
-            onClick={() => handleLinkClick('consultation-section')}
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.open(`https://wa.me/916283067083?text=${encodeURIComponent("Hello i was looking forward to book a call")}`, '_blank');
+            }}
             className="w-full text-center bg-[#8B6F47] text-[#FAF8F3] py-3 rounded-full font-sans text-xs tracking-widest uppercase font-medium cursor-pointer"
           >
             Book Consultation

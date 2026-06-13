@@ -5,7 +5,7 @@ import { Instagram, Heart } from 'lucide-react';
 export default function InstagramGrid() {
   const handleInstagramClick = (postId: string) => {
     // Elegant simulation of outbound social connection
-    window.open(`https://instagram.com/heritagepavilion`, '_blank');
+    window.open(`https://instagram.com/aarasta`, '_blank');
   };
 
   return (
@@ -19,19 +19,19 @@ export default function InstagramGrid() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#8B6F47] mb-3 block">
-              Digital Archives List
+              Curated Feeds
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-medium text-[#111111]">
-              Continuity on Instagram
+              Styling Inspiration
             </h2>
           </div>
           <button
             id="btn-follow-instagram"
-            onClick={() => window.open('https://instagram.com/heritagepavilion', '_blank')}
+            onClick={() => window.open('https://instagram.com/aarasta', '_blank')}
             className="inline-flex items-center space-x-2 border-b border-[#111111] pb-1 font-sans text-xs tracking-widest uppercase text-[#111111] hover:text-[#8B6F47] hover:border-[#8B6F47] transition-all cursor-pointer font-medium"
           >
             <Instagram size={14} />
-            <span>@heritagepavilion</span>
+            <span>@aarasta</span>
           </button>
         </div>
 
@@ -59,10 +59,10 @@ export default function InstagramGrid() {
                 <div className="absolute inset-0 bg-[#111111]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
                   <Instagram className="text-[#C4B299] mb-4" size={28} />
                   <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#FAF8F3] font-medium mb-1">
-                    Authentic Preview
+                    Curated Living
                   </span>
                   <span className="font-sans text-xs text-[#FAF8F3]/60 italic font-light">
-                    Click to view stories & reels
+                    Click to view spaces & galleries
                   </span>
                 </div>
               </div>

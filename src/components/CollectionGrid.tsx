@@ -27,7 +27,7 @@ export default function CollectionGrid({ onSelectProduct }: CollectionGridProps)
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#8B6F47] block mb-3">
-              The Curated Pavilion
+              The Curated Aarasta
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-medium text-[#111111]">
               The Featured Collection
@@ -111,18 +111,18 @@ export default function CollectionGrid({ onSelectProduct }: CollectionGridProps)
 
                   {/* Provenance Metadata */}
                   <div className="flex items-center space-x-2 text-xs text-[#111111]/60 mb-6 font-sans">
-                    <span>{product.origin}</span>
+                    <span>{product.material}</span>
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#8B6F47]/40" />
-                    <span>{product.era}</span>
+                    <span>{product.finish}</span>
                   </div>
 
                   {/* Curated CTA - Hairline underline */}
                   <div className="w-full border-t border-[#EAE6DF] pt-4 flex items-center justify-between">
                     <span className="font-mono text-xs text-[#111111]/40">
-                      ID: {product.authenticityDetails.certificateNo}
+                      Ref: {product.serialNo}
                     </span>
                     <span className="font-sans text-xs tracking-widest uppercase font-medium text-[#8B6F47] group-hover:text-[#111111] transition-colors relative">
-                      View Dossier & Details
+                      View Design Details & Styling
                       <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-[#8B6F47] scale-x-100 group-hover:scale-x-0 origin-left transition-transform duration-300" />
                     </span>
                   </div>

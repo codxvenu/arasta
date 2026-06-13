@@ -13,7 +13,7 @@ export default function Testimonials() {
         </span>
         
         <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-medium text-[#111111] mb-16">
-          Words from Discerning <span className="italic font-normal">Connoisseurs</span>
+          Words from <span className="italic font-normal">Distinguished Homes</span>
         </h2>
 
         {/* Asymmetrical Masonry-style Layout for testimonials to avoid generic equal grids */}

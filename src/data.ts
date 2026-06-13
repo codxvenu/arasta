@@ -2,185 +2,160 @@ import { Product, Testimonial, InstagramPost } from './types';
 
 export const PRODUCTS: Product[] = [
   {
-    id: 'chola-nataraja-bronze',
-    title: 'The Great Chola Nataraja Bronze',
-    category: 'Sacred Bronzes',
-    origin: 'Thanjavur District, Tamil Nadu, India',
-    era: 'Late Chola Period',
-    period: '11th Century CE',
-    material: 'Ashtadhatu Bronze alloy (Lost-wax cast)',
-    dimensions: '48.5 x 39.2 x 14.8 inches (123 x 100 x 37 cm)',
+    id: 'aurelia-astrolabe-clock',
+    title: 'The Aurelia Astrolabe Mantel Clock',
+    category: 'Handcrafted Clocks',
+    finish: 'Brushed Antique Bronze & Gilded Gold',
+    material: 'Solid Brass & Polished Quartzite',
+    dimensions: '18.5 x 12.2 x 6.5 inches (47 x 31 x 17 cm)',
+    roomSuitability: 'Drawing Rooms, Executive Suites, Living Chambers',
     availability: 'Available',
     images: [
-      'https://images.unsplash.com/photo-1608962714529-298715bf736d?auto=format&fit=crop&q=80&w=800', // Front View
-      'https://images.unsplash.com/photo-1580136579312-94651dfd596d?auto=format&fit=crop&q=80&w=800', // Back View Structure
-      'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&q=80&w=800', // Close Up: Celestial Face
-      'https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&q=80&w=800', // Detail: Patina & Casting
-      'https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&q=80&w=800', // Detail: Foot on Apasmara (Ignorance)
-      'https://images.unsplash.com/photo-1456086272160-b28b0645b729?auto=format&fit=crop&q=80&w=800', // Detail: The Celestial Aura (Prabhavali)
-      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800', // Detail: Age Cracks & Micro-imperfections
-      'https://images.unsplash.com/photo-1490312278390-ab6414f8d2f5?auto=format&fit=crop&q=80&w=800', // Scale: Sitting in Architectural Gallery Setting
-      'https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&q=80&w=800', // Base Inscription & Marks
-      'https://images.unsplash.com/photo-1551913902-c92207136625?auto=format&fit=crop&q=80&w=800'  // Side Profile Alignment
+      'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800', // Astrolabe golden details
+      'https://images.unsplash.com/photo-1576016770956-debb63d900ef?auto=format&fit=crop&q=80&w=800', // Setting layout
+      'https://images.unsplash.com/photo-1580136579312-94651dfd596d?auto=format&fit=crop&q=80&w=800'  // Detailed gears
     ],
-    historicalStory: 'During the 11th century, under the patronage of the imperial Chola dynasty, South Indian metallurgical masters achieved the absolute peak of cosmic sculpture. This magnificent lost-wax bronze depicts Shiva in his Tandava state, dancing the universe into existence, sustaining its rhythm, and absorbing it back into eternal silence. The casting method is entirely irreversible—the clay mold is shattered to liberate the bronze, making this Nataraja an unique masterwork. Acquired from a royal collector lineage, its provenance trace relates directly to Thanjavur temple borders and has been documented in high detail since 1928.',
-    provenance: 'Previously in the private collection of Sir Arthur Vance (U.K., acquired 1928 in Madras Presidency); by descent to Lady Beatrice Vance; sold at auction in London, 1982; acquired by the Heritage Preservation Trust; and subsequently held in a premium private collection in New Delhi.',
-    conditionReport: 'Superb archaeological condition for an 11th-century outdoor bronze. Represents traditional "malachite" and "cuprite" layered patina from prolonged subterranean rest. Some minor historical abrasions on the lower rim of the lotus pedestal and stable micro-fissures around the rear flame arc (as is characteristic of the ancient gas release during pouring). Surface remains strictly untreated to preserve the authentic oxidation crust.',
-    authenticityDetails: {
-      certificateNo: 'HP-1082-AR',
-      reviewedBy: 'Dr. Srinivasan Raghavan (Academy of Fine Arts, Thiruvananthapuram)',
-      documentation: 'Radiocarbon and thermoluminescence core testing reports included, establishing chemical composition fitting 11th-century Thanjavur smelting practices.',
-      verificationStatus: 'Expert Committee Reviewed'
-    }
+    designInspiration: 'Inspired by late-renaissance astronomical instruments, the Aurelia combines mechanical complexity with minimalist sculptural form. The dial is suspended within a concentric polished framework, capturing casting shadows and creating an exquisite, functional centerpoint for formal mantelpiece arrangements.',
+    craftsmanshipDetails: 'Each gear assembly is individually hand-milled, calibrated, and checked across 140 hours of meticulous work in our dedicated clockmaking atelier in Munich. The solid bronze chassis is treated with a hand-burnished oil rubbed finish, safeguarding the natural texture while ensuring smooth mechanical rotation.',
+    stylingRecommendations: 'Position on a dark marble fireplace mantel or a heavy dark console, flanked by textured ceramic objects or leather-bound journals. Allow sufficient breathing room around the clock to let its silhouette behave as a standalone dramatic focal point.',
+    placementSuggestions: 'Best displayed on fireplace mantels, signature entrance console tables, or deep executive study desks.',
+    careInstructions: 'Wipe down with a dry, non-abrasive microfiber cloth. Avoid acidic chemical metal polishers to preserve the authentic oil-rubbed bronze protective crust. Wind the spring-driven mechanical movement once weekly.',
+    serialNo: 'PAV-7782-AC',
+    curatorInspiration: 'A mechanical sculpture that does more than measure time—it commands attention, invites gaze, and anchors a room with quiet luxury and elegant design discipline.'
   },
   {
-    id: 'mughal-court-miniature',
-    title: 'Mughal Court Durbar Miniature Painting',
-    category: 'Manuscripts & Paintings',
-    origin: 'Agra Court Studio, Northern India',
-    era: 'Reign of Emperor Aurangzeb / Late Golden Era',
-    period: 'Circa 1680',
-    material: 'Gouache and gold leaf on hand-burnished Sialkoti paper',
-    dimensions: '12.4 x 8.7 inches (31.5 x 22.1 cm)',
-    availability: 'Reserved',
+    id: 'fluted-travertine-vessel',
+    title: 'The Fluted Travertine Masterpiece Vessel',
+    category: 'Decorative Objects',
+    finish: 'Honed Raw Matte Finish',
+    material: 'Premium Tuscan Travertine Stone',
+    dimensions: '22.5 x 14.0 x 14.0 inches (57 x 36 x 36 cm)',
+    roomSuitability: 'Airy Foyers, Dining Sideboards, Minimalist Living Zones',
+    availability: 'Available',
     images: [
-      'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800', // Front Full View
-      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&q=80&w=800', // Border Detail Zoom
+      'https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&q=80&w=800', // Honed travertine texture
+      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800', // Curated display
+      'https://images.unsplash.com/photo-1551913902-c92207136625?auto=format&fit=crop&q=80&w=800'  // Detail of geological grooves
+    ],
+    designInspiration: 'A gorgeous celebration of neoclassical architecture, re-imagined with modern asymmetrical curves. Crafted to utilize generous negative space, the fluted cavities are deep-cut to catch and refract ambient morning and evening light.',
+    craftsmanshipDetails: 'Formed out of a hand-selected single massive block of raw Italian Travertine stone. Our artisans preserve the rich geological pockets and unique calcite currents, brushing the finished material into a soft, highly tactile low-luster matte.',
+    stylingRecommendations: 'We recommend displaying the vessel entirely empty to serve as a pure architectural sculpture, or styled elegantly with a few organic dried willow branches. Works beautifully as a warm contrast on light oak furniture.',
+    placementSuggestions: 'Signature entry pedestals, wide sideboard tables, or recessed wall alcoves under soft lighting.',
+    careInstructions: 'Do not fill with standing water directly, as raw travertine stone is organically porous. Place a small protective internal glass sleeve if styling with fresh stems. Clean only with a damp cotton cloth.',
+    serialNo: 'PAV-3044-TV',
+    curatorInspiration: 'An ideal harmony of raw organic mineral beauty and highly disciplined architectural structure—a statement piece of timeless design.'
+  },
+  {
+    id: 'gilded-abstract-horizon-triptych',
+    title: 'The Gilded Abstract Horizon Triptych',
+    category: 'Wall Art',
+    finish: 'Hand-Applied Gold Leaf & Textured Gesso',
+    material: 'Belgian Linen on Hardwood Floating Frames',
+    dimensions: 'Three Panels, Each 48.0 x 24.0 x 2.0 inches (122 x 61 x 5 cm)',
+    roomSuitability: 'Master Suites, Luxury Lounges, Formal Dining Rooms',
+    availability: 'Available',
+    images: [
+      'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800', // Gold abstract artwork
+      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&q=80&w=800', // Detail of leaf application
       'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800'  // Gold leaf shimmer texture
     ],
-    historicalStory: 'This masterpiece of miniaturization represents the highly refined visual style of the Imperial Agra Court workshops prior to the dispersion of court painters. Painted using brushes comprising single squirrel hairs of absolute softness, it displays an evening court presentation (Durbar). The gold leaf detailing is layered via traditional agate-burnishing, creating a shimmering optical depth that responds dynamically to changing ambient light. Sourced from a prominent noble estate in Rajasthan, this piece retains its original border, written using Persian calligraphy describing court protocol.',
-    provenance: 'Udaipur Royal Archives (1720–1890); acquired by Dr. J.S. Lall in 1912; gifted to the current estate owner in 1964. Museum-level conservation history logged.',
-    conditionReport: 'Extremely well-preserved pigment fidelity. No paint flaking or active water damage. Natural aging is evident along the margins of the Sialkoti paper, showcasing minor oxidized foxing spots. Framed under museum-grade ultra-clear UV-blocking framing glass to safeguard historical pigments.',
-    authenticityDetails: {
-      certificateNo: 'HP-4491-MP',
-      reviewedBy: 'Prof. Ananda Sen (Department of Asiatic Arts)',
-      documentation: 'Curated dossier with infrared photography analysis exposing the underlying carbon charcoal sketches (Tarh).',
-      verificationStatus: 'Verified'
-    }
+    designInspiration: 'Capturing the sublime serenity of ocean skylines during golden hour dusk. This triptych abstracts the horizon into an elegant, modern visual coordinate that infuses warmth into minimalist interiors.',
+    craftsmanshipDetails: 'Constructed over thick Belgian linen canvas. The surface is hand-combed with a heavy gesso base paste to establish dynamic vertical lines, then hand-gilded with fine 22-karat gold leaf foil layers. Completed with premium custom oak floating frames.',
+    stylingRecommendations: 'Mount the three panels horizontally with a strict 2-inch gap between them. Best placed directly above a low-profile linen sofa. Position warm accent spotlights above to reflect the gold accents dynamically as you traverse the room.',
+    placementSuggestions: 'Directly above low back sofas, wide bed headboards, or grand executive dining panels.',
+    careInstructions: 'Do not expose to high relative humidity or constant damp conditions. Dust extremely lightly with a fine feather duster to prevent leaf lifting. Do not use liquid cleaners.',
+    serialNo: 'PAV-9901-WA',
+    curatorInspiration: 'Transforms plain white space into a living landscape of movement, texture, warmth, and curated light.'
   },
   {
-    id: 'victorian-silver-tea-service',
-    title: 'The Garrard & Co. Sterling Silver Tea Service',
-    category: 'Luxury Metalware',
-    origin: 'Garrard & Co. Royal Jewelers, London, UK',
-    era: 'Victorian Era',
-    period: 'London, 1874',
-    material: '.925 Sterling Silver with carved African Ebony Handles',
-    dimensions: 'Tray: 24.5 inches diameter; Teapot Height: 9.8 inches',
+    id: 'brutalist-cast-bronze-sculpture',
+    title: 'The Brutalist Cast-Bronze Focal Sculpture',
+    category: 'Sculptures & Accents',
+    finish: 'Oxidized Verde & Charred Espresso Patina',
+    material: 'Heavy Lost-Wax Cast Bronze with Black Basalt Base',
+    dimensions: '28.0 x 15.5 x 10.0 inches (71 x 39 x 25 cm)',
+    roomSuitability: 'Reading Rooms, Minimalist Libraries, Statement Foyers',
+    availability: 'Reserved',
+    images: [
+      'https://images.unsplash.com/photo-1608962714529-298715bf736d?auto=format&fit=crop&q=80&w=800', // Brutalist sculpture look
+      'https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&q=80&w=800', // Solid bronze zoom
+      'https://images.unsplash.com/photo-1490312278390-ab6414f8d2f5?auto=format&fit=crop&q=80&w=800'  // Detail of raw bronze texture with light
+    ],
+    designInspiration: 'Exploring themes of organic erosion and architectural permanence. This heavy bronze piece balances bold volumetric weight with delicate negative geometric spaces, making it a powerful interior design statement.',
+    craftsmanshipDetails: 'Fabricated using the historic lost-wax casting method over a custom hand-modeled clay master core. The textured, raw-metal exterior undergoes a multi-stage direct thermal oxidation bath to build charred velvet espresso and mineralized green tones.',
+    stylingRecommendations: 'Position at eye level on a minimalist travertine or concrete pedestal. Allow strong directional side-lighting or natural light from windows to paint rich, dramatic silhouettes across the surrounding walls.',
+    placementSuggestions: 'Accent wall alcoves, prominent library table centers, or luxury office entrances.',
+    careInstructions: 'Avoid damp cloths. The deep, baked patina is completely chemically stable and only requires a soft sweep of a feather duster. Apply a very thin layer of neutral beeswax annually to preserve the undertone shine.',
+    serialNo: 'PAV-2210-BS',
+    curatorInspiration: 'A dramatic, commanding presence. An anchor that grounds modern rooms and establishes a highly personalized, artistic point of view.'
+  },
+  {
+    id: 'alabaster-sphere-vignette',
+    title: 'The Alabaster Sphere Table Vignette',
+    category: 'Decorative Objects',
+    finish: 'Silk-Polish Translucent Finish',
+    material: 'Rare Veined Aragonite Alabaster',
+    dimensions: 'Set of Three: 8.0, 6.0, and 4.0 inches diameter (20, 15, and 10 cm)',
+    roomSuitability: 'Coffee Tables, Floating Shelves, Work Desks',
     availability: 'Available',
     images: [
-      'https://images.unsplash.com/photo-1576016770956-debb63d900ef?auto=format&fit=crop&q=80&w=800', // Front View Tea Set
-      'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800', // Maker’s Mark & Hallmarks
-      'https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&q=80&w=800'  // Intricate Hand Chasing Detail
+      'https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&q=80&w=800', // Smooth spheres
+      'https://images.unsplash.com/photo-1456086272160-b28b0645b729?auto=format&fit=crop&q=80&w=800', // Marble stone layout
+      'https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&q=80&w=800'  // Polished texture
     ],
-    historicalStory: 'Commissioned in 1874 from Garrard & Co., the prestigious Crown Jewelers, this four-piece sterling silver service exemplifies High Victorian opulence. Elaborately hand-chased with classical foliage, grotesque masks, and scrolling cartouches, it displays the peak of British silversmithing. The handles are hand-carved out of dense solid wood, offering both a beautiful aesthetic and insulated thermal protection. The heavy tray boasts a family crest of the Devonshire nobility at its center, surrounded by hand-engraved scrollwork.',
-    provenance: 'Originally commissioned by the 7th Duke of Devonshire; auctioned by Sotheby’s Geneva in 1978; held privately in Milan; acquired by the Gallery in 2021.',
-    conditionReport: 'Excellent presentation condition with crisp hallmark impressions. The pouring spouts are free of dents. Teapot lid hinge functions smoothly with minimal slack. Gentle surface micro-scratches corresponding with light ceremonial usage over the last 150 years. Never machine-polished.',
-    authenticityDetails: {
-      certificateNo: 'HP-9031-SV',
-      reviewedBy: 'Marcus Sterling (Aesthetic Silver Appraiser, Guild of London)',
-      documentation: 'Certified registry entry under London Goldsmiths Hall hallmarks of 1874.',
-      verificationStatus: 'Documented'
-    }
+    designInspiration: 'The elemental perfection of the sphere is elevated by the unique marbled grey veins of rare alabaster. These sculptural spheres react magically with light, casting high translucence on their surrounding surfaces.',
+    craftsmanshipDetails: 'Each sphere is hand-turned on precision high-speed wood-turning lathes, meticulously water-sanded across ten grades of grit to a glass-smooth polish, and sealed with a thin layer of natural carnauba wax.',
+    stylingRecommendations: 'Group the three spheres together on a dark walnut tray to create depth, or cascade them individually across a stack of linen art books to structure a sophisticated shelf vignette.',
+    placementSuggestions: 'Coffee tables, open display cases, library side-tables.',
+    careInstructions: 'Keep away from oils or highly acidic compounds. Wipe with a dry flannel cloth. Alabaster is relatively soft—avoid placement next to sharp steel elements.',
+    serialNo: 'PAV-4012-AS',
+    curatorInspiration: 'Moments of pure geometry that add a level of visual discipline, organic materiality, and sophistication to your surface layouts.'
   },
   {
-    id: 'gandhara-bodhisattva-bust',
-    title: 'Gandharan Schist Bodhisattva Bust',
-    category: 'Ancient Sculptures',
-    origin: 'Peshawar Valley, Ancient Gandhara Province',
-    era: 'Kushan Empire Period',
-    period: '3rd Century CE',
-    material: 'Deep Grey Micaceous Schist Stone',
-    dimensions: '21.6 x 11.8 x 6.3 inches (55 x 30 x 16 cm)',
-    availability: 'Available',
-    images: [
-      'https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&q=80&w=800', // Bust Front Angle
-      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800', // Elegant Angle In Museum Light
-      'https://images.unsplash.com/photo-1551913902-c92207136625?auto=format&fit=crop&q=80&w=800'  // Texture of the Schist
-    ],
-    historicalStory: 'A timeless witness to Greco-Buddhist interactions, this schist bust carved in the ancient Silk Road province of Gandhara represents a Bodhisattva (possibly Maitreya). It showcases a fascinating synthesis of Greek Hellenistic drapery, facial modeling, and Indian spiritual iconography. The deep drapes of the robes and the incredibly detailed waves of the hair bun (ushnisha) reflect a classical sculptural ancestry. The gentle, serene smile stands as an immortal emblem of spiritual transcendence and absolute inner calm.',
-    provenance: 'Excavated near Taxila region during early geological surveys (pre-1940); held in the private collection of Colonel Herbert (acquired 1943); purchased by New Delhi collector, 1972; transferred to our vaults in 2024.',
-    conditionReport: 'Authentic stone weathering is prominent. Left earlobe displays historic fragment loss from antiquity; classical breaks exist on the shoulder boundaries, confirming its separation from a larger temple frieze. The stone is structurally fully stable with gorgeous micaceous mineral sparkles across the surface when lit.',
-    authenticityDetails: {
-      certificateNo: 'HP-3032-GS',
-      reviewedBy: 'Dr. Tariq Khan (Archaeological Foundation of South Asia)',
-      documentation: 'X-ray fluorescence mineral testing confirms quarry origin from the Khyber schist hills; official export license included.',
-      verificationStatus: 'Expert Committee Reviewed'
-    }
-  },
-  {
-    id: 'rajasthan-royal-writing-desk',
-    title: 'Mewar Royal East Indian Rosewood Writing Bureau',
-    category: 'Luxury Furniture',
-    origin: 'Udaipur Palace Estate Workshops, Rajasthan',
-    era: 'Late Regency Colonial / Indian Royal',
-    period: 'Circa 1820',
-    material: 'Lacquered East Indian Rosewood with Brass Marquetry & Ivory Escutcheons',
-    dimensions: '42.0 x 36.5 x 22.0 inches (107 x 93 x 56 cm)',
-    availability: 'Available',
-    images: [
-      'https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&q=80&w=800', // Desk Front Full view
-      'https://images.unsplash.com/photo-1456086272160-b28b0645b729?auto=format&fit=crop&q=80&w=800', // Intricate Drawer Handles
-      'https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&q=80&w=800'  // Drawer Inlay detail
-    ],
-    historicalStory: 'Handcrafted in Rajasthan during the period of colonial interaction, this write-cabinet showcases an exquisite Rajasthani synthesis of British Regency furniture layout and pure Rajput woodcraft. Fabricated out of highly dense and beautifully figured East Indian Rosewood (Shisham), the desk features intricate hand-chiseled brass marquetry, presenting native floral and peacock patterns. The lockable falls open to reveal a fitted compartment with miniature drawers, secret document slots, and velvet writing surface.',
-    provenance: 'Commissioned of Mewar court nobility for local administrative estates; private repository Udaipur; acquired by antiquarian V. Sharma (Jaipur, 1968); private residence Mumbai (1975–2023).',
-    conditionReport: 'Expertly stabilized by our master conservationist without removing original shellac finish. Brass inlay is completely intact and flush with wood surface. Keys to the central roll and lower drawers are functional (includes custom reproduction key for the hidden bureau compartment). Minimal historic wood movement consistent with dry desert climate history.',
-    authenticityDetails: {
-      certificateNo: 'HP-8872-FW',
-      reviewedBy: 'Sanjay Rawat (National Academy of Wood Heritage Artistry, Jodhpur)',
-      documentation: 'Dossier containing structural wood-ring analysis, proving 200-year-old aged heartwood growth.',
-      verificationStatus: 'Verified'
-    }
-  },
-  {
-    id: 'persian-tree-of-life-rug',
-    title: 'Kerman Ravar Silk-Inlay Tree of Life Rug',
-    category: 'Historical Textiles',
-    origin: 'Ravar Village, Kerman Province, Persia (Iran)',
-    era: 'Late Qajar Dynasty',
-    period: 'Circa 1890',
-    material: 'Hand-dyed Silk and Spoon-spun Kork Wool on solid Cotton Webbing',
-    dimensions: '10.2 x 7.1 feet (310 x 216 cm)',
+    id: 'obsidian-minimalist-wall-clock',
+    title: 'The Obsidian Minimalist Pendulum Clock',
+    category: 'Handcrafted Clocks',
+    finish: 'Charcoal Slate Lacquer & Polished Brass',
+    material: 'Natural Obsidian Slab & German Mechanical Movement',
+    dimensions: '36.0 x 10.0 x 4.0 inches (91 x 25 x 10 cm)',
+    roomSuitability: 'Main Entrance Foyers, Executive Offices, Contemporary Dining Walls',
     availability: 'Acquired',
     images: [
-      'https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=800', // Rug Overall Pattern
-      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800', // Pile close-up
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800'  // Medallion Detailed weavers signature
+      'https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=800', // Clean pendulum ticking lines
+      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800', // Golden brass indicators
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800'  // Brass pendulum motion blur
     ],
-    historicalStory: 'Woven in the legendary looms of Ravar, a small town in Kerman renowned for producing the finest rugs for royal courts, this piece represents the famous "Tree of Life" motif. The weaving features nesting nightingales, gazelles, and exotic flora representing continuous life and natural harmony. Knotted at an astonishing density of approximately 650 Persian knots per square inch, the rug integrates silk pile highlights that catch light like water. Natural vegetable dyes have aged gracefully to yield sublime, non-repetitive shades.',
-    provenance: 'Acquired at Tehran bazaar by a French industrialist in 1902; held in a Paris town home for three generations; acquired by the Heritage Preservation Trust in 2018.',
-    conditionReport: 'Acquired by a high-profile collector. Pile is uniformly healthy with minor natural oxidation of wool. Original side cords are completely intact. Symmetrical wool fringe showing standard light fraying appropriate for its age. Chemically analyzed, confirming 100% natural madder root, indigo, and pomegranate rind dye sources.',
-    authenticityDetails: {
-      certificateNo: 'HP-1218-TX',
-      reviewedBy: 'Jean-Luc Dupont (Asiatic Textile Society, Lyon)',
-      documentation: 'Includes digital weaver cartography register entry matching traditional Late Qajar Ravar court styles.',
-      verificationStatus: 'Verified'
-    }
+    designInspiration: 'A modern tribute to mid-century Scandinavian horology, focusing on high functional discipline and absolute clarity of material. The contrast of cold volcanic glass and warm golden pendulum rods forms a captivating wall event.',
+    craftsmanshipDetails: 'The rear backing panel is cut from a naturally split slab of deep black obsidian sheet-rock. Hand-assembled with an ultra-thin polished golden brass pendulum mechanism. Integrated with a silent hum German mechanical timing unit.',
+    stylingRecommendations: 'Mount centered on a wide architectural foyer wall or directly above a low oak sideboard. The slow, silent sweep of the brass pendulum acts as a soothing rhythmic accent within contemporary spaces.',
+    placementSuggestions: 'Main foyer entrances, grand hallways, or executive styling partitions.',
+    careInstructions: 'Do not manually force wind the movement handles. Ensure secure wall-stud anchor mounting due to the heavy density of the premium obsidian rock slab backing.',
+    serialNo: 'PAV-5561-PC',
+    curatorInspiration: 'An absolute masterpiece of modern minimalism. The glossy obsidian back behaves like an obsidian mirror, reflecting room lighting and framing the gold pendulum action.'
   }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    quote: 'The Gandhara schist Bodhisattva is the crown jewel of my library. The Heritage Preservation Trust provided impeccable documentation. The transparency of their condition report gave me absolute confidence to acquire.',
+    quote: "The Fluted Travertine Vessel is the absolute anchor of our formal reception foyer. The curation is so precise; it feels like it was custom commissioned for our space. The team’s design advice was incredibly helpful.",
     author: 'Sunita Mehra',
-    role: 'Prominent Art Collector & Architect',
+    role: 'Principal Interior Architect, Mehra Design Studios',
     location: 'Mumbai, Maharashtra'
   },
   {
     id: '2',
-    quote: 'Working with their specialists on sourcing historical bronzes for our luxury villa project was seamless. Their nationwide insured white-glove shipping ensured the priceless artifacts arrived at our Alibaug estate in pristine conservation.',
+    quote: "Working with The Pavilion to style our penthouse lounge was a masterpiece of collaborative luxury. Their custom pendulum wall clock and travertine vessels brought a sense of timeless design and harmony that changed the dialogue of our home.",
     author: 'Rajiv Malhotra',
-    role: 'Managing Director, Malhotra & Associates Interiors',
+    role: 'Homeowner & Art Director',
     location: 'New Delhi'
   },
   {
     id: '3',
-    quote: 'For us, authenticity is paramount. The Heritage Pavilion does not merely sell antiques; they are highly scholarly conservators of history. Each consultation is an education in art history.',
-    author: 'Dr. Evelyn Dubois',
-    role: 'Founding Fellow, Oriental Sculpture Trust',
-    location: 'Auroville, Puducherry'
+    quote: "We require objects that transcend fleeting trends. The Pavilion's collection represents unparalleled craftsmanship and clean lines. Each piece is styled to catch light and redefine white space, breathing life into luxury interiors.",
+    author: 'Evelyn Sen',
+    role: 'Lead Architect, Atelier Sen',
+    location: 'Bengaluru, Karnataka'
   }
 ];
 
@@ -188,29 +163,29 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: 'post-1',
     imageUrl: 'https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&q=80&w=600',
-    caption: 'Discover the silent gaze of antiquity. Unveiling the 3rd-century Gandharan Bodhisattva in our private Delhi viewing room. #SothebysStyle #ArtHistory #CuratedHome',
-    likes: '1.2k',
+    caption: 'Quiet travertine flutes catching the afternoon light. Elevating blank spaces into minimalist galleries. #MinimalistInteriors #CuratedHome #TravertineStyle',
+    likes: '1.4k',
     date: 'June 10, 2026'
   },
   {
     id: 'post-2',
     imageUrl: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=600',
-    caption: 'Whispers from the Agra court, 1680. Close up detail highlighting gold leaf pigments on Sialkoti burnished parchment. #MughalArt #MiniaturePainting #FineArt',
-    likes: '840',
+    caption: 'Gold leaf reflections on combed gesso. Hanging the Horizon Triptych to frame a low-profile linen couch. #LuxuryLiving #WallArtExpression #InteriorStyling',
+    likes: '920',
     date: 'June 4, 2026'
   },
   {
     id: 'post-3',
-    imageUrl: 'https://images.unsplash.com/photo-1576016770956-debb63d900ef?auto=format&fit=crop&q=80&w=600',
-    caption: 'Victorian opulence defined. Sterling silver service by Garrard & Co. Royal Jewelers, hand chased in 1874. Provenance traceable directly to British crown. #Silverware #ChristiesIn',
-    likes: '934',
+    imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=600',
+    caption: 'The Aurelia Astrolabe Clock. A structural tribute to traditional European clockwork, engineered for distinguished living mantels. #HandcraftedTimepiece #InteriorLuxury',
+    likes: '811',
     date: 'May 28, 2026'
   },
   {
     id: 'post-4',
     imageUrl: 'https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=600',
-    caption: 'The Tree of Life loops gracefully under our gallery lighting. A stunning Ravar wool and silk rug from 1890, woven in Kerman. #LuxuryInteriors #HeritageRugs #PersianRug',
-    likes: '1.5k',
+    caption: 'A rhythmic swing of gold and volcanic obsidian. Sourcing focal objects that bring warmth and movement to contemporary dining halls. #ModernPendulum #SohoVibe #DesignDetails',
+    likes: '1.1k',
     date: 'May 20, 2026'
   }
 ];

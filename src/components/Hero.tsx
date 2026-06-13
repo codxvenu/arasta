@@ -32,7 +32,7 @@ export default function Hero({ onExploreClick, onBookClick }: HeroProps) {
           <div className="flex items-center space-x-3 mb-6">
             <span className="w-8 h-[1px] bg-[#8B6F47]" />
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#C4B299]">
-              The Pavilion Collection
+              The Aarasta Collection
             </span>
           </div>
 
@@ -41,8 +41,8 @@ export default function Hero({ onExploreClick, onBookClick }: HeroProps) {
             id="hero-title"
             className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-medium leading-[1.15] tracking-tight mb-6 text-[#FAF8F3] filter drop-shadow-sm"
           >
-            Curated Antiques & <br className="hidden md:inline" />
-            <span className="italic font-normal text-[#C4B299]">Timeless Collectibles</span>
+            Designed To Be Admired. <br className="hidden md:inline" />
+            <span className="italic font-normal text-[#C4B299]">Curated To Be Lived With.</span>
           </h1>
 
           {/* Subheading */}
@@ -50,7 +50,7 @@ export default function Hero({ onExploreClick, onBookClick }: HeroProps) {
             id="hero-subheading"
             className="font-sans text-base sm:text-lg lg:text-xl font-normal leading-relaxed text-[#FAF8F3]/90 mb-10 max-w-2xl"
           >
-            Rare artifacts, paintings, and decorative pieces sourced and curated for collectors and luxury interiors across India. Established on absolute provenance and meticulous conservation.
+            Discover handcrafted clocks, decorative accents, wall art, sculptures, and statement pieces curated to bring character, elegance, and individuality into modern, distinguished homes.
           </p>
 
           {/* Buttons: Pill shape, no shadow */}
@@ -67,7 +67,7 @@ export default function Hero({ onExploreClick, onBookClick }: HeroProps) {
               onClick={onBookClick}
               className="bg-transparent hover:bg-[#FAF8F3]/10 text-[#FAF8F3] font-sans text-xs tracking-widest uppercase font-medium py-4 px-8 rounded-full border border-[#FAF8F3]/30 transition-all duration-300 cursor-pointer"
             >
-              Book Consultation
+              Styling Consultation
             </button>
           </div>
 
@@ -79,19 +79,19 @@ export default function Hero({ onExploreClick, onBookClick }: HeroProps) {
             <div className="flex items-center space-x-3">
               <span className="text-[#8B6F47] text-lg">✓</span>
               <span className="font-mono text-xs tracking-widest uppercase text-[#FAF8F3]/80">
-                Authentic Pieces Only
+                Premium Craftsmanship
               </span>
             </div>
             <div className="flex items-center space-x-3">
               <span className="text-[#8B6F47] text-lg">✓</span>
               <span className="font-mono text-xs tracking-widest uppercase text-[#FAF8F3]/80">
-                Pan India Insured Delivery
+                White-Glove Insured Delivery
               </span>
             </div>
             <div className="flex items-center space-x-3">
               <span className="text-[#8B6F47] text-lg">✓</span>
               <span className="font-mono text-xs tracking-widest uppercase text-[#FAF8F3]/80">
-                Scholarly Consultations
+                Interior Selection Guidance
               </span>
             </div>
           </div>

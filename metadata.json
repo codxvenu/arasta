@@ -1,6 +1,6 @@
 {
-  "name": "Luxury Antique & Collectibles Gallery",
-  "description": "A premium curated gallery showcase of rare antiques, paintings, historical sculptures, and high-end collectibles for discerning collectors and luxury interiors.",
+  "name": "Aarasta — Luxury Home Décor & Curated Accents",
+  "description": "A premium curated gallery of handcrafted clocks, decorative objects, wall art, and custom interior accents designed to elevate distinguished homes.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

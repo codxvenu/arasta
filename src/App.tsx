@@ -52,12 +52,22 @@ export default function App() {
   };
 
   const handleBookConsultation = (productTitle: string) => {
-    setPrefilledProductTitle(productTitle);
-    scrollToSection('consultation-section');
+    if (productTitle && productTitle !== 'Curated Collection (Broad)') {
+      const message = `Hello,
+
+I came across "${productTitle}" on your website and would like to know more about it.
+
+Could you please share its availability, pricing, dimensions, delivery timelines, and any additional details that may help me evaluate it for my space?
+
+Thank you. I look forward to your guidance.`;
+      window.open(`https://wa.me/916283067083?text=${encodeURIComponent(message)}`, '_blank');
+    } else {
+      window.open(`https://wa.me/916283067083?text=${encodeURIComponent("Hello i was looking forward to book a call")}`, '_blank');
+    }
   };
 
   return (
-    <div id="pavilion-root" className="min-h-screen bg-[#FAF8F3] selection:bg-[#8B6F47] selection:text-[#FAF8F3]">
+    <div id="aarasta-root" className="min-h-screen bg-[#FAF8F3] selection:bg-[#8B6F47] selection:text-[#FAF8F3]">
       
       {/* Floating Transparent Headbar */}
       <Navigation
