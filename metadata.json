@@ -1,0 +1,6 @@
+{
+  "name": "Luxury Antique & Collectibles Gallery",
+  "description": "A premium curated gallery showcase of rare antiques, paintings, historical sculptures, and high-end collectibles for discerning collectors and luxury interiors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
